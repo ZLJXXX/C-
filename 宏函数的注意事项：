@@ -1,0 +1,14 @@
+宏函数的注意事项：
+1.宏函数后面不加分号
+2.当宏函数涉及到乘除法等优先级问题时，必须用括号括起来eg:(a + b)*(a + b) a + b * a + b
+#include<iostream>
+#define MAX(a,b) a > b ? a : b
+#define SQUEl(X) (X)*(X)
+using namespace std;
+int main()
+{
+	int a = 9, b = 4;
+	int squel = SQUEl(MAX(a, b));
+	system("pause");
+	return 0;
+}
